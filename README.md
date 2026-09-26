@@ -166,5 +166,3 @@ After running all scripts and installation the file structure should look like t
 ├── requirements.txt
 └── tts_generator.py
 ```
-
-```
