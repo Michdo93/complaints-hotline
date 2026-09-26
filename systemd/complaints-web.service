@@ -1,0 +1,19 @@
+[Unit]
+Description=Complaints Hotline Web Dashboard (Flask)
+After=network.target
+
+[Service]
+Type=simple
+User=asterisk
+Group=asterisk
+WorkingDirectory=/opt/complaints-hotline
+# Using the Python binary from the venv in /opt/complaints-hotline
+ExecStart=/opt/complaints-hotline/bin/python /opt/complaints-hotline/app.py
+Restart=always
+RestartSec=5
+
+# Security & Environment Settings
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
